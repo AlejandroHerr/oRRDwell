@@ -1,0 +1,3 @@
+## global definitions
+cpus: 4
+names: "cpu,cpu1,cpu2,cpu3,cpu4"

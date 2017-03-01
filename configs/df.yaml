@@ -1,0 +1,3 @@
+## global definitions
+probes: "/,/boot,/home"
+names: "root,boot,home"

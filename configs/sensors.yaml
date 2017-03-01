@@ -1,0 +1,3 @@
+## global definitions
+probes: "Physical,Core 0,Core 1"
+names: "physical,core0,core1"
