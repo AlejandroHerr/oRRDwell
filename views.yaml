@@ -1,0 +1,21 @@
+cpu:
+  hname: "CPU's Use"
+  graphs:
+    - shape: "line"
+      axis:
+        position: right
+        visible: yes
+      style:
+        cpu:
+          color: base0A
+        cpu1:
+          color: base08
+        cpu2:
+          color: base09
+        cpu3:
+          color: base0B
+        cpu4:
+          color: base0D
+      data:
+        module: cpu
+  
