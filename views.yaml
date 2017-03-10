@@ -1,21 +1,118 @@
+---
 cpu:
-  hname: "CPU's Use"
-  graphs:
-    - shape: "line"
-      axis:
-        position: right
-        visible: yes
-      style:
-        cpu:
-          color: base0A
-        cpu1:
-          color: base08
-        cpu2:
-          color: base09
-        cpu3:
-          color: base0B
-        cpu4:
-          color: base0D
-      data:
-        module: cpu
-  
+  hname: CPU's Use
+  charts:
+    shape: line
+    low: 0
+    axisY:
+      position: right
+      visible: true
+      unit: percentage
+    probes:
+      cpu:
+        color: base0A
+      cpu1:
+        color: base08
+      cpu2:
+        color: base09
+      cpu3:
+        color: base0B
+      cpu4:
+        color: base0D
+    source:
+      module: cpu
+load:
+  hname: Load Average
+  charts:
+    shape: line
+    low: 0
+    axisY:
+      position: right
+      visible: true
+      unit: load
+    probes:
+      load1:
+        color: base00
+      load5:
+        color: base02
+      load15:
+        color: base03
+    source:
+      module: loadavg
+memory:
+  hname: Memory
+  charts:
+    shape: area
+    stacked: true
+    high: 12582912
+    low: 0
+    axisY:
+      position: right
+      visible: true
+      unit: bytes
+    probes:
+      used:
+        color: base08
+      cached:
+        color: base09
+      buffer:
+        color: base0A
+      free:
+        color: base0B
+    source:
+      module: meminfo
+exp:
+  hname: EXPERIMENTAL
+  charts:
+  - shape: line
+    high: 100
+    low: 0
+    axisY:
+      position: right
+      visible: true
+      unit: percentage
+    probes:
+      cpu:
+        color: base0A
+      cpu1:
+        color: base08
+      cpu2:
+        color: base09
+      cpu3:
+        color: base0B
+      cpu4:
+        color: base0D
+    source:
+      module: cpu
+  - shape: line
+    high: 100
+    low: 0
+    secondary: true
+    axisY:
+      unit: degrees
+      visible: false
+    probes:
+      physical:
+        color: base0A
+      core0:
+        color: base08
+      core1:
+        color: base09
+    source:
+      module: sensors
+  - shape: line
+    low: 0
+    secondary: true
+    axisY:
+      position: left
+      visible: true
+      unit: load
+    probes:
+      load1:
+        color: base00
+      load5:
+        color: base02
+      load15:
+        color: base03
+    source:
+      module: loadavg
