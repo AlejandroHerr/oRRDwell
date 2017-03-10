@@ -1,3 +1,4 @@
 ## global definitions
 probes: "/,/boot,/home"
-names: "root,boot,home"
+rrd_names: "root,boot,home"
+names: "root,free_root,used_root,boot,free_boot,used_boot,home,free_home,used_home"
