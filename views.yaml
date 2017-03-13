@@ -3,22 +3,21 @@ cpu:
   hname: CPU's Use
   charts:
     shape: line
-    low: 0
     axisY:
       position: right
       visible: true
       unit: percentage
     probes:
       cpu:
-        color: base0A
+        color: base03
       cpu1:
-        color: base08
-      cpu2:
-        color: base09
-      cpu3:
         color: base0B
-      cpu4:
+      cpu2:
         color: base0D
+      cpu3:
+        color: base08
+      cpu4:
+        color: base09
     source:
       module: cpu
 load:
@@ -61,6 +60,47 @@ memory:
         color: base0B
     source:
       module: meminfo
+diskuse:
+  hname: Disk Usage
+  charts:
+    - shape: area
+      stacked: true
+      low: 0
+      axisY:
+        position: right
+        unit: bytes
+      probes:
+        used_boot:
+          color: base08
+        used_root:
+          color: base09
+        used_home:
+          color: base0A
+        free_boot:
+          color: base0B
+        free_root:
+          color: base0C
+        free_home:
+          color: base0D
+      source:
+        module: df
+    - shape: line
+      stacked: false
+      low: 0
+      high: 100
+      secondary: true
+      axisY:
+        position: left
+        unit: percentage
+      probes:
+        boot:
+          color: base08
+        root:
+          color: base09
+        home:
+          color: base0A
+      source:
+        module: df
 exp:
   hname: EXPERIMENTAL
   charts:
