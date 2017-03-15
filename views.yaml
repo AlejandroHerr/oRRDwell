@@ -18,8 +18,7 @@ cpu:
         color: base08
       cpu4:
         color: base09
-    source:
-      module: cpu
+    module: cpu
 load:
   hname: Load Average
   charts:
@@ -36,8 +35,7 @@ load:
         color: base02
       load15:
         color: base03
-    source:
-      module: loadavg
+    module: loadavg
 memory:
   hname: Memory
   charts:
@@ -58,8 +56,7 @@ memory:
         color: base0A
       free:
         color: base0B
-    source:
-      module: meminfo
+    module: meminfo
 diskuse:
   hname: Disk Usage
   charts:
@@ -82,8 +79,7 @@ diskuse:
           color: base0C
         free_home:
           color: base0D
-      source:
-        module: df
+      module: df
     - shape: line
       stacked: false
       low: 0
@@ -99,8 +95,7 @@ diskuse:
           color: base09
         home:
           color: base0A
-      source:
-        module: df
+      module: df
 exp:
   hname: EXPERIMENTAL
   charts:
@@ -122,8 +117,7 @@ exp:
         color: base0B
       cpu4:
         color: base0D
-    source:
-      module: cpu
+    module: cpu
   - shape: line
     high: 100
     low: 0
@@ -138,8 +132,7 @@ exp:
         color: base08
       core1:
         color: base09
-    source:
-      module: sensors
+    module: sensors
   - shape: line
     low: 0
     secondary: true
@@ -154,5 +147,4 @@ exp:
         color: base02
       load15:
         color: base03
-    source:
-      module: loadavg
+    module: loadavg
