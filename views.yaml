@@ -46,7 +46,7 @@ memory:
     axisY:
       position: right
       visible: true
-      unit: bytes
+      unit: kiloBytes
     probes:
       used:
         color: base08
@@ -60,12 +60,29 @@ memory:
 diskuse:
   hname: Disk Usage
   charts:
+    - shape: line
+      low: 0
+      high: 100
+      axisY:
+        position: right
+        unit: percentage
+      probes:
+        boot:
+          color: base08
+        root:
+          color: base09
+        home:
+          color: base0A
+      module: df
+diskuse_2:
+  hname: Disk Usage 2
+  charts:
     - shape: area
       stacked: true
       low: 0
       axisY:
         position: right
-        unit: bytes
+        unit: kiloBytes
       probes:
         used_boot:
           color: base08
@@ -80,24 +97,26 @@ diskuse:
         free_home:
           color: base0D
       module: df
+network:
+  hname: Network
+  charts:
     - shape: line
-      stacked: false
       low: 0
-      high: 100
-      secondary: true
       axisY:
-        position: left
-        unit: percentage
+        position: right
+        unit: bytes
       probes:
-        boot:
+        wlp2s0_in:
           color: base08
-        root:
+        wlp2s0_out:
           color: base09
-        home:
+        enp1s0_in:
           color: base0A
-      module: df
-exp:
-  hname: EXPERIMENTAL
+        enp1s0_out:
+          color: base0B
+      module: net
+perf:
+  hname: Performance
   charts:
   - shape: line
     high: 100
