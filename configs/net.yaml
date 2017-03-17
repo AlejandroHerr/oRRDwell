@@ -1,0 +1,4 @@
+## global definitions
+probes: "enp1s0,wlp2s0"
+rrd_names: "enp1s0,wlp2s0"
+names: "enp1s0_in,wlp2s0_in,enp1s0_in_packets,wlp2s0_in_packets,enp1s0_in_errors,wlp2s0_in_errors,enp1s0_out,wlp2s0_out,enp1s0_out_packets,wlp2s0_out_packets,enp1s0_out_errors,wlp2s0_out_errors"
